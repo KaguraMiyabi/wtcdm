@@ -92,4 +92,4 @@ for line in fileLine:
     fw.write(line)
     fw.write("\n")
 fw.close()
-print("OK")
+print("css compatibility ok")

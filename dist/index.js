@@ -1,1 +1,0 @@
-!function(){"use strict";window.onload=function(){var o="你好，世界！";console.log(o),document.write(o)}}();

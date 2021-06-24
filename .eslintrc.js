@@ -16,9 +16,10 @@ module.exports = {
         '@typescript-eslint',
     ],
     'rules': {
-        'indent': ['warn', 4],
+        'indent': [1, 4, {'SwitchCase': 1}],
         'space-before-function-paren': 0,
         'max-len': 0,
         'require-jsdoc': 1,
+        'object-curly-spacing': [0, 'never'],
     },
 };

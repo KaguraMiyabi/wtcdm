@@ -1,3 +1,7 @@
 ._*
 Thumbs.db
 node_modules
+dist
+src/*.css
+dist/*
+index.html

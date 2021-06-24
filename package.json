@@ -4,9 +4,10 @@
   "description": "WTCDm",
   "main": "index.js",
   "scripts": {
-    "release": "python3 css-compatibility.py css/index.css src/index.css && gulp css && gulp html && mv dist/index.html ./index.html && webpack --mode=production --progress",
-    "debug": "python3 css-compatibility.py css/index.css src/index.css && cp src/index.css dist/index.css && cp src/index.html ./index.html && webpack --mode=development --progress",
-    "html": "python3 css-compatibility.py css/index.css src/index.css && cp src/index.css dist/index.css && cp src/index.html ./index.html"
+    "release": "python3 css-compatibility.py css/index.css src/index.css && gulp css && rm -f src/index.css && gulp html && mv dist/index.html ./index.html && webpack --mode=production --progress",
+    "debug": "python3 css-compatibility.py css/index.css src/index.css && cp src/index.css dist/index.css && rm -f src/index.css && cp src/index.html ./index.html && webpack --mode=development --progress",
+    "html": "python3 css-compatibility.py css/index.css src/index.css && cp src/index.css dist/index.css && rm -f src/index.css && cp src/index.html ./index.html",
+    "clean": "rm -f index.html dist/* src/*.css"
   },
   "repository": {
     "type": "git",
@@ -34,12 +35,12 @@
     "webpack-cli": "^4.6.0"
   },
   "dependencies": {
-    "@types/echarts": "^4.9.7",
-    "echarts": "^5.1.1",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-uglify": "^3.0.2",
+    "material-design-icons": "^3.0.1",
+    "purecss": "^2.0.5",
     "ts-loader": "^9.1.1"
   }
 }
